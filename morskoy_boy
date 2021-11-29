@@ -1,0 +1,33 @@
+print('Карта:')
+a =  [[[' ']for i in range (10)] for i in range (10)]
+for i in a:
+    print(i)
+
+# однопалубные
+
+for i in range(4):
+    coordinate = input('x and y').split()
+    x = int(coordinate[1])
+    y = int(coordinate[0])
+    a[x][y] = ['1']
+    print(coordinate)
+for i in a:
+    print(i)
+
+# двухпалубные
+
+for i in range(3):
+    coordinate1 = input('x and y').split()
+    x = (int(coordinate1[0]) - int(coordinate1[1]))
+    y = (int(coordinate1[2]) - int(coordinate1[3]))
+    if x + y == -1 or x + y == 1:
+        if (int(coordinate1[0]) == int(coordinate1[1])) or (int(coordinate1[2]) == int(coordinate1[3])):
+            a[int(coordinate1[2])][int(coordinate1[0])] = ['2']
+            a[int(coordinate1[3])][int(coordinate1[1])] = ['2']
+            print(coordinate1)
+        else:
+            print('Неправельное расположение')
+    else:
+        print('Неправельное расположение')
+for i in a:
+    print(i)
