@@ -1,16 +1,49 @@
 print('Карта:')
-a =  [[[' ']for i in range (10)] for i in range (10)]
+a =[[[' ']for i in range(12)] for j in range(12)]
+for i in range(12):
+    for j in range(12):
+        if i == 0 or i == 12 - 1 or j == 0 or j == 12 - 1:
+            a[i][j] = ['#']
 for i in a:
     print(i)
 
 # однопалубные
-
 for i in range(4):
     coordinate = input('x and y').split()
-    x = int(coordinate[1])
-    y = int(coordinate[0])
-    a[x][y] = ['1']
-    print(coordinate)
+
+# колизия
+
+    if a[((int(coordinate[1])) + 1)][((int(coordinate[0])) + 0)] != ['1']:
+        if a[((int(coordinate[1])) + 1)][((int(coordinate[0])) + 1)] != ['1']:
+            if a[((int(coordinate[1])) + 0)][((int(coordinate[0])) + 1)] != ['1']:
+                if a[((int(coordinate[1])) - 1)][((int(coordinate[0])) + 1)] != ['1']:
+                    if a[((int(coordinate[1])) - 1)][((int(coordinate[0])) + 0)] != ['1']:
+                        if a[((int(coordinate[1])) - 1)][((int(coordinate[0])) - 1)] != ['1']:
+                            if a[((int(coordinate[1])) - 0)][((int(coordinate[0])) - 1)] != ['1']:
+                                if a[((int(coordinate[1])) + 1)][((int(coordinate[0])) - 1)] != ['1']:
+
+                                    x = int(coordinate[1])
+                                    y = int(coordinate[0])
+                                    a[x][y] = ['1']
+                                    print(coordinate)
+
+                                else:
+                                    print('Неправельное расположение')
+                            else:
+                                print('Неправельное расположение')
+                        else:
+                            print('Неправельное расположение')
+                    else:
+                        print('Неправельное расположение')
+                else:
+                    print('Неправельное расположение')
+            else:
+                print('Неправельное расположение')
+        else:
+            print('Неправельное расположение')
+    else:
+        print('Неправельное расположение')
+
 for i in a:
     print(i)
 
@@ -20,11 +53,222 @@ for i in range(3):
     coordinate1 = input('x and y').split()
     x = (int(coordinate1[0]) - int(coordinate1[1]))
     y = (int(coordinate1[2]) - int(coordinate1[3]))
+    if a[((int(coordinate1[2])) + 1)][((int(coordinate1[0])) + 0)] != ['1'] or ['2']:
+        if a[((int(coordinate1[2])) + 1)][((int(coordinate1[0])) + 1)] != ['1'] or ['2']:
+            if a[((int(coordinate1[2])) + 0)][((int(coordinate1[0])) + 1)] != ['1'] or ['2']:
+                if a[((int(coordinate1[2])) - 1)][((int(coordinate1[0])) + 1)] != ['1'] or ['2']:
+                    if a[((int(coordinate1[2])) - 1)][((int(coordinate1[0])) + 0)] != ['1'] or ['2']:
+                        if a[((int(coordinate1[2])) - 1)][((int(coordinate1[0])) - 1)] != ['1'] or ['2']:
+                            if a[((int(coordinate1[2])) - 0)][((int(coordinate1[0])) - 1)] != ['1'] or ['2']:
+                                if a[((int(coordinate1[2])) + 1)][((int(coordinate1[0])) - 1)] != ['1'] or ['2']:
+                                    pass
+
+
+                                else:
+                                    print('Неправельное расположение')
+                            else:
+                                print('Неправельное расположение')
+                        else:
+                            print('Неправельное расположение')
+                    else:
+                        print('Неправельное расположение')
+                else:
+                    print('Неправельное расположение')
+            else:
+                print('Неправельное расположение')
+        else:
+            print('Неправельное расположение')
+    else:
+        print('Неправельное расположение')
+
+    if a[((int(coordinate1[3])) + 1)][((int(coordinate1[1])) + 0)] != ['1'] or ['2']:
+        if a[((int(coordinate1[3])) + 1)][((int(coordinate1[1])) + 1)] != ['1'] or ['2']:
+            if a[((int(coordinate1[3])) + 0)][((int(coordinate1[1])) + 1)] != ['1'] or ['2'] :
+                if a[((int(coordinate1[3])) - 1)][((int(coordinate1[1])) + 1)] != ['1'] or ['2']:
+                    if a[((int(coordinate1[3])) - 1)][((int(coordinate1[1])) + 0)] != ['1'] or ['2']:
+                        if a[((int(coordinate1[3])) - 1)][((int(coordinate1[1])) - 1)] != ['1'] or ['2']:
+                            if a[((int(coordinate1[3])) - 0)][((int(coordinate1[1])) - 1)] != ['1'] or ['2']:
+                                if a[((int(coordinate1[3])) + 1)][((int(coordinate1[1])) - 1)] != ['1'] or ['2']:
+                                    pass
+
+
+                                else:
+                                    print('Неправельное расположение')
+                            else:
+                                print('Неправельное расположение')
+                        else:
+                            print('Неправельное расположение')
+                    else:
+                        print('Неправельное расположение')
+                else:
+                    print('Неправельное расположение')
+            else:
+                print('Неправельное расположение')
+        else:
+            print('Неправельное расположение')
+    else:
+        print('Неправельное расположение')
+
     if x + y == -1 or x + y == 1:
         if (int(coordinate1[0]) == int(coordinate1[1])) or (int(coordinate1[2]) == int(coordinate1[3])):
             a[int(coordinate1[2])][int(coordinate1[0])] = ['2']
             a[int(coordinate1[3])][int(coordinate1[1])] = ['2']
             print(coordinate1)
+        else:
+            print('Неправельное расположение')
+    else:
+        print('Неправельное расположение')
+for i in a:
+    print(i)
+
+# трёхпалубные
+
+for i in range(2):
+    coordinate2 = input('x and y').split()
+    x = (int(coordinate2[0])) - (int(coordinate2[2]))
+    xM = (int(coordinate2[0])) - (int(coordinate2[1]))
+    y = (int(coordinate2[3])) - (int(coordinate2[5]))
+    yM = (int(coordinate2[3])) - (int(coordinate2[4]))
+    if a[((int(coordinate2[3])) + 1)][((int(coordinate2[0])) + 0)] != ['1'] or ['2']:
+        if a[((int(coordinate2[3])) + 1)][((int(coordinate2[0])) + 1)] != ['1'] or ['2']:
+            if a[((int(coordinate2[3])) + 0)][((int(coordinate2[0])) + 1)] != ['1'] or ['2']:
+                if a[((int(coordinate2[3])) - 1)][((int(coordinate2[0])) + 1)] != ['1'] or ['2']:
+                    if a[((int(coordinate2[3])) - 1)][((int(coordinate2[0])) + 0)] != ['1'] or ['2']:
+                        if a[((int(coordinate2[3])) - 1)][((int(coordinate2[0])) - 1)] != ['1'] or ['2']:
+                            if a[((int(coordinate2[3])) - 0)][((int(coordinate2[0])) - 1)] != ['1'] or ['2']:
+                                if a[((int(coordinate2[3])) + 1)][((int(coordinate2[0])) - 1)] != ['1'] or ['2']:
+                                    pass
+
+
+                                else:
+                                    print('Неправельное расположение')
+                            else:
+                                print('Неправельное расположение')
+                        else:
+                            print('Неправельное расположение')
+                    else:
+                        print('Неправельное расположение')
+                else:
+                    print('Неправельное расположение')
+            else:
+                print('Неправельное расположение')
+        else:
+            print('Неправельное расположение')
+    else:
+        print('Неправельное расположение')
+
+    if a[((int(coordinate2[5])) + 1)][((int(coordinate2[2])) + 0)] != ['1'] or ['2']:
+        if a[((int(coordinate2[5])) + 1)][((int(coordinate2[2])) + 1)] != ['1'] or ['2']:
+            if a[((int(coordinate2[5])) + 0)][((int(coordinate2[2])) + 1)] != ['1'] or ['2']:
+                if a[((int(coordinate2[5])) - 1)][((int(coordinate2[2])) + 1)] != ['1'] or ['2']:
+                    if a[((int(coordinate2[5])) - 1)][((int(coordinate2[2])) + 0)] != ['1'] or ['2']:
+                        if a[((int(coordinate2[5])) - 1)][((int(coordinate2[2])) - 1)] != ['1'] or ['2']:
+                            if a[((int(coordinate2[5])) - 0)][((int(coordinate2[2])) - 1)] != ['1'] or ['2']:
+                                if a[((int(coordinate2[5])) + 1)][((int(coordinate2[2])) - 1)] != ['1'] or ['2']:
+                                    pass
+
+
+                                else:
+                                    print('Неправельное расположение')
+                            else:
+                                print('Неправельное расположение')
+                        else:
+                            print('Неправельное расположение')
+                    else:
+                        print('Неправельное расположение')
+                else:
+                    print('Неправельное расположение')
+            else:
+                print('Неправельное расположение')
+        else:
+            print('Неправельное расположение')
+    else:
+        print('Неправельное расположение')
+
+    if x + y == -2 or x + y == 2:
+        if xM + yM == -1 or xM + yM == 1:
+            a[int(coordinate2[5])][int(coordinate2[2])] = ['3']
+            a[int(coordinate2[4])][int(coordinate2[1])] = ['3']
+            a[int(coordinate2[3])][int(coordinate2[0])] = ['3']
+            print(coordinate2)
+        else:
+            print('Неправельное расположение')
+    else:
+        print('Неправельное расположение')
+for i in a:
+    print(i)
+
+# четырёхпалубные
+
+for i in range(1):
+    coordinate3 = input('x and y').split()
+    x = (int(coordinate3[0])) - (int(coordinate3[3]))
+    xM = (int(coordinate3[1])) - (int(coordinate3[2]))
+    y = (int(coordinate3[4])) - (int(coordinate3[7]))
+    yM = (int(coordinate3[5])) - (int(coordinate3[6]))
+    if a[((int(coordinate3[4])) + 1)][((int(coordinate3[0])) + 0)] != ['1'] or ['2']:
+        if a[((int(coordinate3[4])) + 1)][((int(coordinate3[0])) + 1)] != ['1'] or ['2']:
+            if a[((int(coordinate3[4])) + 0)][((int(coordinate3[0])) + 1)] != ['1'] or ['2']:
+                if a[((int(coordinate3[4])) - 1)][((int(coordinate3[0])) + 1)] != ['1'] or ['2']:
+                    if a[((int(coordinate3[4])) - 1)][((int(coordinate3[0])) + 0)] != ['1'] or ['2']:
+                        if a[((int(coordinate3[4])) - 1)][((int(coordinate3[0])) - 1)] != ['1'] or ['2']:
+                            if a[((int(coordinate3[4])) - 0)][((int(coordinate3[0])) - 1)] != ['1'] or ['2']:
+                                if a[((int(coordinate3[4])) + 1)][((int(coordinate3[0])) - 1)] != ['1'] or ['2']:
+                                    pass
+
+
+                                else:
+                                    print('Неправельное расположение')
+                            else:
+                                print('Неправельное расположение')
+                        else:
+                            print('Неправельное расположение')
+                    else:
+                        print('Неправельное расположение')
+                else:
+                    print('Неправельное расположение')
+            else:
+                print('Неправельное расположение')
+        else:
+            print('Неправельное расположение')
+    else:
+        print('Неправельное расположение')
+
+    if a[((int(coordinate3[7])) + 1)][((int(coordinate3[7])) + 0)] != ['1'] or ['2']:
+        if a[((int(coordinate3[7])) + 1)][((int(coordinate3[7])) + 1)] != ['1'] or ['2']:
+            if a[((int(coordinate3[7])) + 0)][((int(coordinate3[7])) + 1)] != ['1'] or ['2']:
+                if a[((int(coordinate3[7])) - 1)][((int(coordinate3[7])) + 1)] != ['1'] or ['2']:
+                    if a[((int(coordinate3[7])) - 1)][((int(coordinate3[7])) + 0)] != ['1'] or ['2']:
+                        if a[((int(coordinate3[7])) - 1)][((int(coordinate3[7])) - 1)] != ['1'] or ['2']:
+                            if a[((int(coordinate3[7])) - 0)][((int(coordinate3[7])) - 1)] != ['1'] or ['2']:
+                                if a[((int(coordinate3[7])) + 1)][((int(coordinate3[7])) - 1)] != ['1'] or ['2']:
+                                    pass
+
+
+                                else:
+                                    print('Неправельное расположение')
+                            else:
+                                print('Неправельное расположение')
+                        else:
+                            print('Неправельное расположение')
+                    else:
+                        print('Неправельное расположение')
+                else:
+                    print('Неправельное расположение')
+            else:
+                print('Неправельное расположение')
+        else:
+            print('Неправельное расположение')
+    else:
+        print('Неправельное расположение')
+
+    if x + y == -3 or x +y == 3:
+        if xM +yM == -1 or xM + yM == 1:
+            a[int(coordinate3[7])][int(coordinate3[3])] = ['4']
+            a[int(coordinate3[6])][int(coordinate3[2])] = ['4']
+            a[int(coordinate3[5])][int(coordinate3[1])] = ['4']
+            a[int(coordinate3[4])][int(coordinate3[0])] = ['4']
+            print(coordinate3)
         else:
             print('Неправельное расположение')
     else:
