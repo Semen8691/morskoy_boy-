@@ -157,14 +157,14 @@ for i in range(2):
     else:
         print('Неправельное расположение')
 
-    if a[((int(coordinate2[5])) + 1)][((int(coordinate2[2])) + 0)] != ['1'] or ['2']:
-        if a[((int(coordinate2[5])) + 1)][((int(coordinate2[2])) + 1)] != ['1'] or ['2']:
-            if a[((int(coordinate2[5])) + 0)][((int(coordinate2[2])) + 1)] != ['1'] or ['2']:
-                if a[((int(coordinate2[5])) - 1)][((int(coordinate2[2])) + 1)] != ['1'] or ['2']:
-                    if a[((int(coordinate2[5])) - 1)][((int(coordinate2[2])) + 0)] != ['1'] or ['2']:
-                        if a[((int(coordinate2[5])) - 1)][((int(coordinate2[2])) - 1)] != ['1'] or ['2']:
-                            if a[((int(coordinate2[5])) - 0)][((int(coordinate2[2])) - 1)] != ['1'] or ['2']:
-                                if a[((int(coordinate2[5])) + 1)][((int(coordinate2[2])) - 1)] != ['1'] or ['2']:
+    if a[((int(coordinate2[5])) + 1)][((int(coordinate2[2])) + 0)] != ['1'] or ['2'] or ['3']:
+        if a[((int(coordinate2[5])) + 1)][((int(coordinate2[2])) + 1)] != ['1'] or ['2'] or ['3']:
+            if a[((int(coordinate2[5])) + 0)][((int(coordinate2[2])) + 1)] != ['1'] or ['2'] or ['3']:
+                if a[((int(coordinate2[5])) - 1)][((int(coordinate2[2])) + 1)] != ['1'] or ['2'] or ['3']:
+                    if a[((int(coordinate2[5])) - 1)][((int(coordinate2[2])) + 0)] != ['1'] or ['2'] or ['3']:
+                        if a[((int(coordinate2[5])) - 1)][((int(coordinate2[2])) - 1)] != ['1'] or ['2'] or ['3']:
+                            if a[((int(coordinate2[5])) - 0)][((int(coordinate2[2])) - 1)] != ['1'] or ['2'] or ['3']:
+                                if a[((int(coordinate2[5])) + 1)][((int(coordinate2[2])) - 1)] != ['1'] or ['2'] or ['3']:
                                     pass
 
 
@@ -206,14 +206,14 @@ for i in range(1):
     xM = (int(coordinate3[1])) - (int(coordinate3[2]))
     y = (int(coordinate3[4])) - (int(coordinate3[7]))
     yM = (int(coordinate3[5])) - (int(coordinate3[6]))
-    if a[((int(coordinate3[4])) + 1)][((int(coordinate3[0])) + 0)] != ['1'] or ['2']:
-        if a[((int(coordinate3[4])) + 1)][((int(coordinate3[0])) + 1)] != ['1'] or ['2']:
-            if a[((int(coordinate3[4])) + 0)][((int(coordinate3[0])) + 1)] != ['1'] or ['2']:
-                if a[((int(coordinate3[4])) - 1)][((int(coordinate3[0])) + 1)] != ['1'] or ['2']:
-                    if a[((int(coordinate3[4])) - 1)][((int(coordinate3[0])) + 0)] != ['1'] or ['2']:
-                        if a[((int(coordinate3[4])) - 1)][((int(coordinate3[0])) - 1)] != ['1'] or ['2']:
-                            if a[((int(coordinate3[4])) - 0)][((int(coordinate3[0])) - 1)] != ['1'] or ['2']:
-                                if a[((int(coordinate3[4])) + 1)][((int(coordinate3[0])) - 1)] != ['1'] or ['2']:
+    if a[((int(coordinate3[4])) + 1)][((int(coordinate3[0])) + 0)] != ['1'] or ['2'] or ['3'] or ['4']:
+        if a[((int(coordinate3[4])) + 1)][((int(coordinate3[0])) + 1)] != ['1'] or ['2'] or ['3'] or ['4']:
+            if a[((int(coordinate3[4])) + 0)][((int(coordinate3[0])) + 1)] != ['1'] or ['2'] or ['3'] or ['4']:
+                if a[((int(coordinate3[4])) - 1)][((int(coordinate3[0])) + 1)] != ['1'] or ['2'] or ['3'] or ['4']:
+                    if a[((int(coordinate3[4])) - 1)][((int(coordinate3[0])) + 0)] != ['1'] or ['2'] or ['3'] or ['4']:
+                        if a[((int(coordinate3[4])) - 1)][((int(coordinate3[0])) - 1)] != ['1'] or ['2'] or ['3'] or ['4']:
+                            if a[((int(coordinate3[4])) - 0)][((int(coordinate3[0])) - 1)] != ['1'] or ['2'] or ['3'] or ['4']:
+                                if a[((int(coordinate3[4])) + 1)][((int(coordinate3[0])) - 1)] != ['1'] or ['2'] or ['3'] or ['4']:
                                     pass
 
 
